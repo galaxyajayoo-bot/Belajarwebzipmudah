@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbsenKu Premium</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div>
+    <h2>🎓 AbsenKu</h2>
+    <p>Premium Dashboard</p>
+  </div>
+
+  <ul>
+    <li class="active">📊 Dashboard</li>
+    <li>📝 Absensi</li>
+    <li>📁 Rekap</li>
+    <li>👨‍🎓 Siswa</li>
+    <li>⚙️ Pengaturan</li>
+  </ul>
+</div>
+
+<div class="main">
+
+  <div class="topbar">
+    <div>
+      <h1>Dashboard Absensi</h1>
+      <p>Kelas 7C • Mei 2026</p>
+    </div>
+
+    <div class="profile">
+      <img src="https://i.pravatar.cc/100">
+      <span>Admin Kelas</span>
+    </div>
+  </div>
+
+  <div class="cards">
+
+    <div class="card hadir">
+      <h3>Total Hadir</h3>
+      <p id="hadirCount">0</p>
+    </div>
+
+    <div class="card sakit">
+      <h3>Total Sakit</h3>
+      <p id="sakitCount">0</p>
+    </div>
+
+    <div class="card izin">
+      <h3>Total Izin</h3>
+      <p id="izinCount">0</p>
+    </div>
+
+    <div class="card alfa">
+      <h3>Total Alfa</h3>
+      <p id="alfaCount">0</p>
+    </div>
+
+  </div>
+
+  <div class="chart-box">
+    <h2>Grafik Kehadiran</h2>
+    <canvas id="attendanceChart"></canvas>
+  </div>
+
+  <div class="table-box">
+    <div class="table-header">
+      <h2>Absensi Siswa</h2>
+      <input type="text" placeholder="Cari siswa...">
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Azzam</td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+          <td><select onchange="updateDashboard()">
+            <option>H</option>
+            <option>S</option>
+            <option>I</option>
+            <option>A</option>
+          </select></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
